@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive case study of colorectal cancer genomic profiles">
+    <meta name="keywords" content="colorectal cancer, genomics, case study, cancer research">
+    <title>Colorectal Cancer Profiles | Cancer Genomics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cancer Genomics Education</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="sequencing.html">DNA Sequencing</a></li>
+                <li><a href="mutations.html">Mutation Types</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li><a href="therapies.html">Clinical Resources</a></li>
+                <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                <li><a href="somatic.html">Somatic Mutations</a></li>
+                <li><a href="expression.html">Gene Expression</a></li>
+                <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                <li><a href="therapies.html">Targeted Therapies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <h1>Colorectal Cancer Genomic Profiles</h1>
+                <p>An in-depth exploration of genomic alterations in colorectal cancer</p>
+            </div>
+        </section>
+
+        <section class="featured-content">
+            <div class="container">
+                <h2>Comprehensive Case Study</h2>
+                <div class="topic-grid">
+                    <article class="topic-card">
+                        <h3>Genetic Landscape</h3>
+                        <p>Detailed analysis of key genetic mutations in colorectal cancer, including APC, KRAS, and p53 alterations.</p>
+                    </article>
+                    <article class="topic-card">
+                        <h3>Molecular Subtypes</h3>
+                        <p>Exploring the molecular heterogeneity of colorectal cancer and its implications for personalized treatment.</p>
+                    </article>
+                    <article class="topic-card">
+                        <h3>Genomic Progression</h3>
+                        <p>Tracing the genomic changes from early-stage adenomas to metastatic colorectal cancer.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Key Findings</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Mutation Frequency</h3>
+                        <ul>
+                            <li>APC gene mutations: 80% of cases</li>
+                            <li>KRAS mutations: 40-45% of colorectal cancers</li>
+                            <li>p53 alterations: 50-60% of advanced cases</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Genomic Insights</h3>
+                        <p>Our comprehensive analysis reveals complex genomic interactions that drive colorectal cancer progression, highlighting the importance of multi-gene panel testing and personalized molecular profiling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Hamburger menu functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

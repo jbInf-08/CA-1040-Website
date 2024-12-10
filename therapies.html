@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Therapies - Cancer Genomics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header - similar to other pages -->
+    <header>
+        <div class="logo">
+            <h1>Targeted Therapies</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <!-- Navigation menu - same as other pages -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="sequencing.html">DNA Sequencing</a></li>
+                <li><a href="mutations.html">Mutation Types</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Clinical Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                        <li><a href="somatic.html">Somatic Mutations</a></li>
+                        <li><a href="expression.html">Gene Expression</a></li>
+                        <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                        <li><a href="therapies.html">Targeted Therapies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h2>Precision Medicine: Targeted Cancer Therapies</h2>
+                
+                <article class="topic-card">
+                    <h3>Molecular Target Identification</h3>
+                    <p>Targeted therapies focus on specific genetic mutations or molecular pathways that drive cancer growth, enabling more precise and effective treatment strategies.</p>
+                </article>
+
+                <article class="topic-card">
+                    <h3>Classes of Targeted Therapies</h3>
+                    <p>These include monoclonal antibodies, small molecule inhibitors, immunotherapies, and gene therapies that specifically interact with cancer-related molecular targets.</p>
+                </article>
+
+                <section>
+                    <h2>Cancer Treatment Strategies</h2>
+                    <table class="resources-table">
+                        <thead>
+                            <tr>
+                                <th>Treatment</th>
+                                <th>Description</th>
+                                <th>Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Immunotherapy</td>
+                                <td>Boosts the immune system to recognize and attack cancer cells.</td>
+                                <td>Effective for melanoma and certain lung cancers.</td>
+                            </tr>
+                            <tr>
+                                <td>Targeted Therapy</td>
+                                <td>Uses drugs designed to target specific genetic mutations in cancer cells.</td>
+                                <td>Commonly used in HER2-positive breast cancer and BRAF-mutated melanoma.</td>
+                            </tr>
+                            <tr>
+                                <td>Gene Therapy</td>
+                                <td>Involves introducing or modifying genes in cancer cells to halt their growth.</td>
+                                <td>Experimental; used in clinical trials for leukemia and other cancers.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="therapy-types">
+                    <h3>Key Targeted Therapy Approaches</h3>
+                    <ul>
+                        <li>Kinase Inhibitors</li>
+                        <li>Monoclonal Antibodies</li>
+                        <li>Hormone Therapies</li>
+                        <li>Angiogenesis Inhibitors</li>
+                        <li>Immunotherapies</li>
+                        <li>PARP Inhibitors</li>
+                    </ul>
+                </section>
+
+                <body>
+                    <img src="https://blog.dana-farber.org/insight/wp-content/uploads/2013/03/Signaling_Pathways.jpg" alt="Cancer Pathway Diagram" style="width: 300px; float: right; margin-right: 20px;">
+                </body>
+
+                <section class="case-studies">
+                    <h3>Case Studies in Targeted Therapy</h3>
+                    <div class="topic-grid">
+                        <article class="topic-card">
+                            <h4>Breast Cancer HER2 Therapy</h4>
+                            <p>Trastuzumab targets HER2 protein overexpression in specific breast cancer subtypes.</p>
+                            <a href="breast-cancer-genomics.html" class="learn-more">Read More</a>
+                        </article>
+                        <article class="topic-card">
+                            <h4>EGFR Inhibitors in Lung Cancer</h4>
+                            <p>Targeted treatments for non-small cell lung cancers with EGFR mutations.</p>
+                            <a href="lung-cancer-mutations.html" class="learn-more">Read More</a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - similar to other pages -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

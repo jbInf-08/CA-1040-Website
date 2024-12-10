@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Common Cancer Genes in Genomic Research">
+    <meta name="keywords" content="cancer genes, oncogenes, tumor suppressor genes, genomics">
+    <title>Common Cancer Genes | Cancer Genomics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Common Cancer Genes</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Clinical Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                        <li><a href="somatic.html">Somatic Mutations</a></li>
+                        <li><a href="expression.html">Gene Expression</a></li>
+                        <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                        <li><a href="therapies.html">Targeted Therapies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h1>Key Genes in Cancer Development</h1>
+                
+                <article>
+                    <h2>Oncogenes and Tumor Suppressor Genes</h2>
+                    <p>Some genes play critical roles in cancer development and progression. Understanding these genes is crucial for diagnosis and targeted therapies.</p>
+                    
+                    <div class="gene-grid">
+                        <div class="gene-card">
+                            <h3>TP53</h3>
+                            <p>A critical tumor suppressor gene, often mutated in various cancers. Known as the "guardian of the genome".</p>
+                        </div>
+                        
+                        <div class="gene-card">
+                            <h3>BRCA1/2</h3>
+                            <p>Genes associated with hereditary breast and ovarian cancer. Mutations increase cancer risk significantly.</p>
+                        </div>
+                        
+                        <div class="gene-card">
+                            <h3>RAS</h3>
+                            <p>Oncogenes involved in cell signaling. Mutations can lead to uncontrolled cell growth.</p>
+                        </div>
+                        
+                        <div class="gene-card">
+                            <h3>EGFR</h3>
+                            <p>Receptor tyrosine kinase often mutated in lung and other cancers, important for targeted therapies.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

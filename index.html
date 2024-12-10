@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational resource for understanding cancer genomics">
+    <meta name="keywords" content="cancer, genomics, research, education">
+    <title>Juan Valentin Bautista - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cancer Genomics Education</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="sequencing.html">DNA Sequencing</a></li>
+                <li><a href="mutations.html">Mutation Types</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li><a href="clinical.html">Clinical Resources</a></li>
+                <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                <li><a href="somatic.html">Somatic Mutations</a></li>
+                <li><a href="expression.html">Gene Expression</a></li>
+                <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                <li><a href="therapies.html">Targeted Therapies</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="research&resources.html">Resources</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <h1>Understanding Cancer Through Genomics</h1>
+                <p>Explore the fundamental concepts of cancer genomics through interactive learning resources.</p>
+                <div class="cta-buttons">
+                    <a href="introduction.html" class="button primary">Start Learning</a>
+                    <a href="tutorial-dna-sequencing-analysis.html" class="button secondary">View Tutorials</a>
+                </div>
+            </div>
+            <div class="dna-animation">
+                <div class="helix"></div>
+            </div>
+        </section>
+
+        <section class="featured-content">
+            <h2>Key Topics</h2>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <h3>DNA Sequencing</h3>
+                    <p>Learn about modern sequencing technologies and their applications in cancer research.</p>
+                    <a href="sequencing.html" class="learn-more">Learn More</a>
+                </article>
+                <article class="topic-card">
+                    <h3>Mutation Analysis</h3>
+                    <p>Understand different types of mutations and their roles in cancer development.</p>
+                    <a href="mutations.html" class="learn-more">Learn More</a>
+                </article>
+                <article class="topic-card">
+                    <h3>Clinical Applications</h3>
+                    <p>Explore how genomic information guides clinical decision-making.</p>
+                    <a href="research.html" class="learn-more">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic content loaded via JavaScript -->
+        <!-- <section class="latest-updates">
+            <h2>Latest Updates</h2>
+            <div class="news-grid">
+                
+            </div>
+        </section> -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

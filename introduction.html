@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Cancer Genomics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cancer Genomics Education</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h1>Introduction to Cancer Genomics</h1>
+                
+                <article class="topic-card">
+                    <h2>What is Cancer Genomics?</h2>
+                    <p>Cancer genomics is a field of study that examines the genetic changes and molecular alterations underlying cancer development, progression, and treatment. By analyzing the entire genome of cancer cells, researchers can gain unprecedented insights into the disease's fundamental mechanisms.</p>
+                </article>
+
+                <article class="topic-card">
+                    <h2>Key Concepts</h2>
+                    <ul>
+                        <li><strong>Genomic Alterations:</strong> Mutations, chromosomal rearrangements, and epigenetic changes that contribute to cancer development.</li>
+                        <li><strong>Precision Medicine:</strong> Tailoring treatments based on the unique genetic profile of an individual's cancer.</li>
+                        <li><strong>Biomarkers:</strong> Genetic indicators that can predict cancer risk, progression, and treatment response.</li>
+                    </ul>
+                </article>
+
+                <article class="topic-card">
+                    <h2>Research Approaches</h2>
+                    <p>Cancer genomics employs several cutting-edge research methodologies:</p>
+                    <ol>
+                        <li>Whole Genome Sequencing</li>
+                        <li>RNA Sequencing</li>
+                        <li>Epigenetic Profiling</li>
+                        <li>Single-Cell Genomics</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <head>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+        .workflow-image {
+            position: absolute;
+            width: 200px;
+            top: 50%; /* Vertically center */
+            right: 10%; /* From right side */
+            transform: translateY(-50%); /* Adjust for true vertical center */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIj4KICAgIDx0aXRsZT5DbGluaWNhbCBHZW5vbWljIFRlc3RpbmcgV29ya2Zsb3c8L3RpdGxlPgogICAgCiAgICA8IS0tIFdvcmtmbG93IFN0ZXBzIC0tPgogICAgPHJlY3QgeD0iNTAiIHk9IjUwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjMzQ5OERCIiByeD0iMTAiLz4KICAgIDxyZWN0IHg9IjI1MCIgeT0iNTAiIHdpZHRoPSIxNTAiIGhlaWdodD0iNjAiIGZpbGw9IiMyRUNDNzEiIHJ4PSIxMCIvPgogICAgPHJlY3QgeD0iNDUwIiB5PSI1MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0YzOUMxMiIgcng9IjEwIi8+CiAgICA8cmVjdCB4PSIyNTAiIHk9IjIwMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzlCNTlCNiIgcng9IjEwIi8+CiAgICAKICAgIDwhLS0gQ29ubmVjdGluZyBBcnJvd3MgLS0+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjciIHJlZlg9IjAiIHJlZlk9IjMuNSIgb3JpZW50PSJhdXRvIj4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjAgMCwgMTAgMy41LCAwIDciIGZpbGw9IiMwMDAiLz4KICAgIDwvbWFya2VyPgogICAgCiAgICA8cGF0aCBkPSJNMjAwIDgwIEgyNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICAgIDxwYXRoIGQ9Ik00MDAgODAgSDQ1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogICAgPHBhdGggZD0iTTMyNSAxMTAgViAyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICAgIAogICAgPCEtLSBMYWJlbHMgLS0+CiAgICA8dGV4dCB4PSIxMjUiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj5TYW1wbGUgQ29sbGVjdGlvbjwvdGV4dD4KICAgIDx0ZXh0IHg9IjMyNSIgeT0iODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPkROQSBFeHRyYWN0aW9uPC90ZXh0PgogICAgPHRleHQgeD0iNTI1IiB5PSI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+U2VxdWVuY2luZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjMyNSIgeT0iMjMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj5EYXRhIEFuYWx5c2lzPC90ZXh0Pgo8L3N2Zz4=" alt="Genomic Testing Clinical Workflow" />
+</body>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

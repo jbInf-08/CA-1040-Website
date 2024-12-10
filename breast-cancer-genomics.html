@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study on Breast Cancer Genomics">
+    <title>Breast Cancer Genomics | Cancer Genomics Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Breast Cancer Genomics</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="case-study">
+            <div class="container">
+                <h2>Breast Cancer Genomics: A Comprehensive Case Study</h2>
+                
+                <article>
+                    <h3>Overview</h3>
+                    <p>Breast cancer is a complex disease with significant genomic variability. This case study explores the genomic landscape of breast cancer, focusing on key genetic mutations and their clinical implications.</p>
+                </article>
+
+                <article>
+                    <h3>Key Genetic Mutations</h3>
+                    <ul>
+                        <li><strong>BRCA1 and BRCA2:</strong> Crucial genes associated with hereditary breast cancer</li>
+                        <li><strong>TP53:</strong> Tumor suppressor gene frequently mutated in breast cancer</li>
+                        <li><strong>PIK3CA:</strong> Oncogene involved in cell growth and proliferation</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Molecular Subtypes</h3>
+                    <p>Breast cancer can be classified into molecular subtypes based on genomic profile:</p>
+                    <ul>
+                        <li>Luminal A</li>
+                        <li>Luminal B</li>
+                        <li>HER2-enriched</li>
+                        <li>Basal-like (Triple-negative)</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Precision Medicine Implications</h3>
+                    <p>Understanding the genomic profile allows for targeted therapies and personalized treatment strategies, improving patient outcomes and survival rates.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

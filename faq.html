@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cancer Genomics Education</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="sequencing.html">DNA Sequencing</a></li>
+                <li><a href="mutations.html">Mutation Types</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">Clinical Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                        <li><a href="somatic.html">Somatic Mutations</a></li>
+                        <li><a href="expression.html">Gene Expression</a></li>
+                        <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                        <li><a href="therapies.html">Targeted Therapies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tutorial-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Answers to common questions about cancer genomics and precision medicine.</p>
+        </section>
+
+        <section class="faq-section">
+            <h2>General Questions</h2>
+            <details>
+                <summary>What is cancer genomics?</summary>
+                <p>Cancer genomics is the study of genetic alterations in cancer cells. It involves analyzing DNA sequences to understand how mutations contribute to cancer development and progression.</p>
+            </details>
+            <details>
+                <summary>How does precision medicine relate to cancer genomics?</summary>
+                <p>Precision medicine uses genomic information to tailor treatments to individual patients based on the specific genetic characteristics of their tumors. This approach aims to provide more effective and targeted therapies.</p>
+            </details>
+            <details>
+                <summary>What is the difference between germline and somatic mutations in cancer?</summary>
+                <p>Germline mutations are inherited genetic changes present in every cell of the body, while somatic mutations occur only in cancer cells during a person's lifetime. Both types can play roles in cancer development.</p>
+            </details>
+        </section>
+
+        <section class="faq-section">
+            <h2>Research Methods</h2>
+            <details>
+                <summary>What is next-generation sequencing (NGS)?</summary>
+                <p>Next-generation sequencing is a high-throughput technology that allows for rapid sequencing of large portions of genomes. It's commonly used in cancer research to identify genetic alterations across many samples simultaneously.</p>
+            </details>
+            <details>
+                <summary>How do researchers analyze genomic data from cancer studies?</summary>
+                <p>Researchers typically use bioinformatics tools and statistical methods to process raw sequencing data, identify mutations, and interpret their biological significance. Large-scale databases and computational pipelines are often employed for these analyses.</p>
+            </details>
+            <details>
+                <summary>What is synthetic lethality in cancer research?</summary>
+                <p>Synthetic lethality refers to the phenomenon where two non-lethal mutations become lethal when combined. Researchers explore synthetic lethal relationships to develop targeted therapies for cancers with specific genetic profiles.</p>
+            </details>
+        </section>
+
+        <section class="faq-section">
+            <h2>Educational Resources</h2>
+            <details>
+                <summary>Where can I find educational materials on cancer genomics?</summary>
+                <p>Several organizations offer educational resources, including the Cancer Genome Consortium (CGC), National Cancer Institute (NCI), and online course platforms like Coursera and edX. Additionally, scientific journals and conferences provide opportunities for learning.</p>
+            </details>
+            <details>
+                <summary>What programming languages are commonly used in bioinformatics and cancer genomics research?</summary>
+                <p>Python is increasingly popular in bioinformatics, along with R for statistical analyses. Other languages like Java, C++, and SQL are also frequently used depending on the specific application and dataset being analyzed.</p>
+            </details>
+            <details>
+                <summary>How can I stay updated on the latest developments in cancer genomics research?</summary>
+                <p>Follow reputable scientific journals, attend conferences, join professional organizations like ASCO or AACR, and engage with online communities dedicated to cancer genomics. Regularly checking websites of major cancer research institutions can also provide insights into ongoing studies and breakthroughs.</p>
+            </details>
+        </section>
+
+        <section class="resources">
+            <h2>Additional Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>Cancer Genome Atlas (TCGA)</h3>
+                    <p>A comprehensive collection of genomic data from various cancer types.</p>
+                    <a href="https://www.cancergenome.nih.gov/" target="_blank">Explore TCGA Data</a>
+                </div>
+                <div class="resource-card">
+                    <h3>National Cancer Institute (NCI)</h3>
+                    <p>Government agency providing cancer information, research funding, and educational resources.</p>
+                    <a href="https://www.cancer.gov/" target="_blank">Visit NCI Website</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Cancer Genetics Journal</h3>
+                    <p>Peer-reviewed articles on the latest developments in cancer genetics and genomics.</p>
+                    <a href="https://www.cancergenomics.org/cancer_genetics_journal.php" target="_blank">Read Journal Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

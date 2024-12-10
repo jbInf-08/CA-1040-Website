@@ -1,0 +1,691 @@
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Light Mode Palette */
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f4f4f5;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #4b5563;
+    --color-accent-primary: #0d9488;
+    --color-accent-secondary: #f472b6;
+    --color-border: #e5e7eb;
+
+    /* Dark Mode Palette */
+    --dark-color-background-primary: #111827;
+    --dark-color-background-secondary: #1f2937;
+    --dark-color-text-primary: #f9fafb;
+    --dark-color-text-secondary: #d1d5db;
+    --dark-color-accent-primary: #10b981;
+    --dark-color-accent-secondary: #ec4899;
+    --dark-color-border: #374151;
+
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-size-base: 16px;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-standard: 0.3s ease;
+
+    /* Shadows */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Classes */
+.dark-mode {
+    --color-background-primary: var(--dark-color-background-primary);
+    --color-background-secondary: var(--dark-color-background-secondary);
+    --color-text-primary: var(--dark-color-text-primary);
+    --color-text-secondary: var(--dark-color-text-secondary);
+    --color-accent-primary: var(--dark-color-accent-primary);
+    --color-accent-secondary: var(--dark-color-accent-secondary);
+    --color-border: var(--dark-color-border);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    margin: 0;
+    transition: background-color var(--transition-standard), color var(--transition-standard);
+}
+
+/* Toggle Switch */
+.custom-toggle {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.custom-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-text-primary); /* Visible in both modes */
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-toggle .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-background-primary); /* Matches the theme */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.custom-toggle input:checked + .slider {
+    background-color: var(--color-accent-primary); /* Accent color when active */
+}
+
+.custom-toggle input:checked + .slider:before {
+    transform: translateX(26px); /* Move toggle to the right */
+}
+
+/* Positioning the toggle icons */
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sun and Moon Icon */
+.toggle-icon i {
+    font-size: 18px;
+    color: var(--color-text-primary); /* Default color */
+    transition: color 0.3s ease;
+}
+
+body:not(.dark-mode) #sun-icon {
+    color: black; /* Sun icon in light mode */
+}
+
+body.dark-mode #sun-icon {
+    color: white; /* Sun icon in dark mode */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    font-size: 1.2rem; /* Reduce header size for consistency */
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+}
+
+.header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+#hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text-primary);
+    transition: background-color var(--transition-fast);
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu li {
+    margin: 0.5rem 0;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+
+/* Theme toggle container */
+.header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px; /* Increase spacing between elements */
+    margin-right: 10px;
+}
+
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Sun/Moon icon spacing */
+.toggle-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure visibility toggling */
+#moon-icon,
+#sun-icon {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with hidden icons */
+}
+
+:not(.hidden) {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive alignment */
+@media (max-width: 768px) {
+    .header-controls {
+        align-items: center;
+    }
+}
+
+/* Toggle icon styles */
+.toggle-icon {
+    font-size: 18px;
+}
+
+/* Custom toggle switch */
+.custom-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Default hidden state */
+#nav-menu.hidden {
+    display: none;
+}
+
+/* Visible state */
+#nav-menu {
+    display: block;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 10px;
+    background-color: var(--color-background-primary);
+    border-radius: 5px;
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-medium);
+    z-index: 1000;
+    width: 200px;
+}
+
+#nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu ul li {
+    margin: 0.5rem 0;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    display: block;
+    transition: color var(--transition);
+}
+
+#nav-menu ul li a:hover {
+    color: var(--color-accent-primary);
+}
+
+/* Show Menu */
+#nav-menu.show {
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent-secondary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-background-secondary);
+    box-shadow: var(--shadow-medium);
+    padding: var(--spacing-sm);
+    border-radius: 5px;
+    margin-top: var(--spacing-xs);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-background-primary);
+    color: var(--color-accent-primary);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+    color: white;
+    height: 100vh;
+    padding: var(--spacing-lg);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-buttons .button {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.cta-buttons .button.primary {
+    background-color: var(--color-accent-secondary);
+    color: white;
+}
+
+.cta-buttons .button.secondary {
+    background-color: white;
+    color: var(--color-accent-primary);
+}
+
+/* Featured Content */
+.featured-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+}
+
+.featured-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.topic-card {
+    background-color: var(--color-background-secondary);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+    transition: transform var(--transition-fast);
+    text-align: left;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Container */
+.footer-container {
+    padding: 1rem 35rem; /* Reduced padding to minimize footer height */
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: space-around; /* Distributes elements evenly across the container */
+    align-items: center;
+    gap: 1rem; /* Reduced gap for tighter layout */
+    margin-bottom: 0.5rem;
+}
+
+.contact-section,
+.follow-section {
+    text-align: center;
+    flex: 0.; /* Makes both sections equal width */
+}
+
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Quick Links Section */
+.quick-links {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links ul li {
+    margin: 0.2rem 0; /* Reduced spacing between links */
+}
+
+.quick-links ul li a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.quick-links ul li a:hover {
+    color: var(--color-accent-primary);
+}
+
+/* Copyright Section */
+.footer-container p {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    /* Desktop-specific styles */
+    .topic-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile-specific styles */
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 0rem 0rem 0rem;
+    background-color: var(--color-background-secondary);
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-background-primary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+}
+
+.contact-form .submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-accent-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form .submit-button:hover {
+    background-color: var(--color-accent-secondary);
+}
+
+/* Back to Home Link */
+.back-link a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+.tutorial-header {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-background-secondary);
+}
+
+.tutorial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+.tutorial-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tutorial-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.resources {
+    background-color: var(--color-background-secondary);
+    padding: var(--spacing-lg);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.resource-card {
+    background-color: var(--color-background-primary);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-medium);
+    transition: transform var(--transition-fast);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resource-card p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.resource-card a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-accent-primary);
+    font-weight: bold;
+    transition: color var(--transition-fast);
+}
+
+.resource-card a:hover {
+    color: var(--color-accent-secondary);
+}
+
+/* Table Styling */
+.resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.resources-table th,
+.resources-table td {
+    border: 1px solid var(--color-border);
+    padding: 0.8rem;
+}
+
+.resources-table th {
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+}
+
+.resources-table tr:nth-child(even) {
+    background-color: var(--color-background-secondary);
+}
+
+/* Animation */
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resources-table {
+    opacity: 0;
+    animation: fadeInTable 1.5s ease-in-out forwards;
+}

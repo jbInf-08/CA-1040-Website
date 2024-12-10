@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive glossary of cancer genomics terms">
+    <title>Glossary of Terms | Cancer Genomics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Glossary of Terms</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container glossary">
+        <section>
+            <h2>Cancer Genomics Glossary</h2>
+            
+            <div class="glossary-section">
+                <h3>A</h3>
+                <dl>
+                    <dt>Allele</dt>
+                    <dd>A variant form of a gene at a specific location (locus) on a chromosome.</dd>
+                    
+                    <dt>Amplification</dt>
+                    <dd>An increase in the number of copies of a specific DNA segment, often associated with cancer progression.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>B</h3>
+                <dl>
+                    <dt>Base Pair (bp)</dt>
+                    <dd>Two complementary nucleotides on opposite strands of DNA that are connected by hydrogen bonds.</dd>
+                    
+                    <dt>Biomarker</dt>
+                    <dd>A measurable indicator of biological state or condition, used in cancer for diagnosis, prognosis, and treatment selection.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>C</h3>
+                <dl>
+                    <dt>CRISPR</dt>
+                    <dd>A gene-editing technology that allows precise modifications to DNA sequences.</dd>
+                    
+                    <dt>Chromosome</dt>
+                    <dd>A structure containing DNA and protein, found in the cell nucleus, that carries genetic information.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>G</h3>
+                <dl>
+                    <dt>Gene Expression</dt>
+                    <dd>The process by which information from a gene is used to synthesize a functional gene product like a protein.</dd>
+                    
+                    <dt>Genomics</dt>
+                    <dd>The study of an organism's entire genome, including gene interactions and regulation.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>M</h3>
+                <dl>
+                    <dt>Mutation</dt>
+                    <dd>A change in the DNA sequence of a gene, which can be inherited or acquired.</dd>
+                    
+                    <dt>Methylation</dt>
+                    <dd>A chemical modification of DNA that can affect gene expression without changing the underlying DNA sequence.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>N</h3>
+                <dl>
+                    <dt>Next-Generation Sequencing (NGS)</dt>
+                    <dd>High-throughput DNA sequencing technologies that allow rapid sequencing of entire genomes.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>O</h3>
+                <dl>
+                    <dt>Oncogene</dt>
+                    <dd>A gene with the potential to cause cancer when mutated or overexpressed.</dd>
+                </dl>
+            </div>
+
+            <div class="glossary-section">
+                <h3>T</h3>
+                <dl>
+                    <dt>Tumor Suppressor Gene</dt>
+                    <dd>A gene that prevents cells from growing and dividing too rapidly, helping to prevent cancer development.</dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:jbautista0055@gmail.com">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>© 2024 Cancer Genomics Educational Resource. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dark-mode.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

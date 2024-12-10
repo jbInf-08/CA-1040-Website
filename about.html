@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cancer Genomics Education</h1>
+        </div>
+        <div class="header-controls">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle-container">
+                <label for="toggle-switch" class="custom-toggle">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-icon">
+                    <i data-lucide="moon" id="moon-icon"></i>
+                    <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+                </span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="sequencing.html">DNA Sequencing</a></li>
+                <li><a href="mutations.html">Mutation Types</a></li>
+                <li><a href="genes.html">Cancer Genes</a></li>
+                <li><a href="therapies.html">Clinical Resources</a></li>
+                <li><a href="hereditary.html">Hereditary Syndromes</a></li>
+                <li><a href="somatic.html">Somatic Mutations</a></li>
+                <li><a href="expression.html">Gene Expression</a></li>
+                <li><a href="diagnostics.html">Molecular Diagnostics</a></li>
+                <li><a href="therapies.html">Targeted Therapies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <main>
+        <section class="tutorial-header">
+            <h1>About Us</h1>
+            <p>Learn more about our mission to educate on cancer genomics.</p>
+        </section>
+
+        <section class="mission-statement">
+            <h2>Our Mission</h2>
+            <p>We aim to provide accessible, accurate, and up-to-date information on cancer genomics to researchers, healthcare professionals, and patients. Our goal is to bridge the knowledge gap between cutting-edge research and practical applications in cancer diagnosis and treatment.</p>
+        </section>
+
+        
+
+        <section class="partnerships">
+            <h2>Partnerships and Collaborations</h2>
+            <p>We collaborate with leading research institutions and medical centers to ensure the accuracy and relevance of our educational content.</p>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <blockquote>"This resource has been invaluable in updating my knowledge of cancer genomics. The explanations are clear and concise."</blockquote>
+                    <cite>Dr. Sarah Lee, Medical Oncologist</cite>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>"As a researcher, I appreciate the depth of information provided on recent advances in cancer genomics."</blockquote>
+                    <cite>Dr. Michael Kim, Cancer Researcher</cite>
+                </div>
+            </div>
+        </section>
+        <section id="resources-section">
+            <h2>Recommended Educational Resources</h2>
+            <div id="resource-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="follow-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/jbInf-08" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juan-boyer-733704209" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:info@cancergenomics.edu">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research&resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Cancer Genomics Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="about.js" defer></script>
+    <script src="dark-mode.js" defer></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle classes for visibility
+        navMenu.classList.toggle('hidden');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('toggle-switch');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Load initial theme and icon state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+
+    // Toggle theme and icon state on switch change
+    themeToggle.addEventListener('change', () => {
+        const isDarkMode = themeToggle.checked;
+
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        if (isDarkMode) {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+});
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
